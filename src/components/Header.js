@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUser } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 
 import './Header.css';
 
@@ -13,7 +13,7 @@ export default function Header(){
             </div>           
             <div className="profile">
                 <h1>Meu perfil</h1>
-                <FaUser color="white" size="0.8em" />
+                <FaUserCircle color="white" size="1em" />
             </div>           
         </div>
     );
