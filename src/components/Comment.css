@@ -1,0 +1,25 @@
+.comment {
+    display: flex;
+    padding:10px;
+}
+
+.comment img {
+    height: 50px;
+    margin-right: 10px;     
+}
+
+.comment .information {   
+    background-color: #EEEE;
+    border-radius: 15px;
+    padding: 10px;   
+}
+
+.comment .information span.name {    
+    font-size: 12px; 
+    font-weight: bold; 
+}
+
+.post-list .post-container .comment-container .comment .information span.content {    
+    font-size: 12px;  
+    font-weight: 100;
+}

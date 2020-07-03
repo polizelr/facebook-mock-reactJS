@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './PostList.css';
 
+import Post from './Post';
+
 class PostList extends Component {
     state={
         posts: [
@@ -73,37 +75,7 @@ class PostList extends Component {
     render(){
         return(
             <div className="post-list">
-                {this.state.posts.map(post => {
-                    return(
-                        <div key={post.id} className="post-container">
-                            <div className="post">                                
-                                <img src={`${post.author.avatar}`} />
-                                <div className="post-information">
-                                    <h2>{post.author.name}</h2>
-                                    <h3>{post.date}</h3>
-                                </div>
-                            </div>
-                            <div className="post-content">
-                                <h2>{post.content}</h2>
-                            </div>
-                            <hr />
-                            <div className="comment-container">
-                                {post.comments.map(comment => {
-                                    return(
-                                        <div key={comment.id} className="comment">
-                                            <img src={`${comment.author.avatar}`}/>
-                                            <div className="information">
-                                                <span className="name">{comment.author.name} </span>
-                                                <span className="content">{comment.content}</span>
-                                            </div>
-                                            
-                                        </div>
-                                    );
-                                })}                                
-                            </div>
-                        </div>
-                    );
-                })}
+                {this.state.posts.map(post => <Post key={post.id} post={post}/>)}
             </div>
         )
     }
