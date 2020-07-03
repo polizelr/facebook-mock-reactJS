@@ -7,14 +7,14 @@ import Logo from '../assets/fb_logo.png';
 
 export default function Header(){
     return(
-        <div className="header">
-            <div className="logo">
+        <header>
+            <nav>
                 <img src={Logo} alt="logo"/>
-            </div>           
-            <div className="profile">
-                <h1>Meu perfil</h1>
-                <FaUserCircle color="white" size="1em" />
-            </div>           
-        </div>
+                <div className="profile">
+                    <h1>Meu perfil</h1>
+                    <FaUserCircle color="white" size="1em" />
+                </div>
+            </nav>                     
+        </header>
     );
 }
